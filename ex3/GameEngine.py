@@ -4,7 +4,7 @@ from ex3.GameStrategy import GameStrategy
 
 class GameEngine:
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.factory = None
         self.strategy = None
         self.turns_simulated = 0
