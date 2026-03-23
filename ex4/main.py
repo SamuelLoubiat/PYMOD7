@@ -7,9 +7,9 @@ def main():
 
     print('\nRegistering Tournament Cards...')
     dragon = TournamentCard("Fire Dragon", 3, "Legendary",
-                            "dragon_001", 1200, 10)
+                            "dragon_001", 1200, 10, 5)
     wizard = TournamentCard("Ice Wizard", 3, "Legendary",
-                            "wizard_001", 1150, 20)
+                            "wizard_001", 1150, 3, 1)
     tournament = TournamentPlatform()
     tournament.register_card(dragon)
     tournament.register_card(wizard)
@@ -22,7 +22,7 @@ def main():
     sorted_cards = sorted(tournament.get_leaderboard(), key=lambda x: x.rating,
                           reverse=True)
     for i, card in enumerate(sorted_cards, start=1):
-        print(f'{i}. {card.name} - Rating: {card.rating}')
+        print(f'{i}. {card.name} - Rating: {card.rating} ({card.win}-{card.losses})')
 
     print('\nPlatform Report:')
     print(tournament.generate_tournament_report())
