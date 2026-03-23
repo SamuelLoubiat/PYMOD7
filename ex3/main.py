@@ -16,7 +16,6 @@ def main():
     print(f'Available types: {factory.get_supported_types()}')
 
     print('\nSimulating aggressive turn...')
-    deck_info = factory.create_themed_deck(3)
     turn_info = game_engine.simulate_turn()
     print(f"Hand: {turn_info['hand']}")
 
