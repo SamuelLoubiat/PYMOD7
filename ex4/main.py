@@ -22,7 +22,8 @@ def main():
     sorted_cards = sorted(tournament.get_leaderboard(), key=lambda x: x.rating,
                           reverse=True)
     for i, card in enumerate(sorted_cards, start=1):
-        print(f'{i}. {card.name} - Rating: {card.rating} ({card.win}-{card.losses})')
+        print(f'{i}. {card.name} - Rating: {card.rating}'
+              f' ({card.win}-{card.losses})')
 
     print('\nPlatform Report:')
     print(tournament.generate_tournament_report())

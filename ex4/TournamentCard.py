@@ -20,7 +20,8 @@ class TournamentCard(Card, Combatable, Rankable):
         print(f"- Record: {self.win}-{self.losses}")
 
     def play(self, game_state: dict) -> dict:
-        return {'card_id': self.card_id, 'action': 'played', 'game_state': game_state}
+        return {'card_id': self.card_id, 'action': 'played',
+                'game_state': game_state}
 
     def get_card_info(self) -> dict:
         return super().get_card_info()
@@ -50,7 +51,8 @@ class TournamentCard(Card, Combatable, Rankable):
         self.losses += losses
 
     def get_rank_info(self) -> dict:
-        return {'card_id': self.card_id, 'rating': self.rating, 'win': self.win, 'losses': self.losses}
+        return {'card_id': self.card_id, 'rating': self.rating,
+                'win': self.win, 'losses': self.losses}
 
     def get_tournament_stats(self) -> dict:
         return self.get_rank_info()

@@ -15,8 +15,8 @@ class TournamentPlatform:
         c1 = self.cards.get(card1_id)
         c2 = self.cards.get(card2_id)
         self.match += 1
-        if not isinstance(c1, TournamentCard) or not isinstance(c2,
-                                                                TournamentCard):
+        if (not isinstance(c1, TournamentCard)
+                or not isinstance(c2, TournamentCard)):
             raise Exception('Invalid card type')
 
         while c1.health > 0 and c2.health > 0:
