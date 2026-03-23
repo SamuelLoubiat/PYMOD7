@@ -14,4 +14,4 @@ class SpellCard(Card):
         return info
 
     def resolve_effect(self, targets: list) -> dict:
-        return {'effect': f'Deal {self.cost} damage to target', 'targets': targets}
+        return {'effect': f'Deal {self.cost} damage to target'}

@@ -15,7 +15,7 @@ def main() -> None:
     print(f"Attack result: {card.attack('Enemy')}")
     print(f'Defense result: {card.defend(5)}')
     print('\nMagic phase:')
-    print(f"Spell cast: {card.cast_spell('Fireball', ['Enemy 1', 'Enemy 2'])}")
+    print(f"Spell cast: {card.cast_spell('Fireball', ['Enemy1', 'Enemy2'])}")
     print(f'Mana channel: {card.channel_mana(3)}')
     print('\nMultiple interface implementation successful!')
 

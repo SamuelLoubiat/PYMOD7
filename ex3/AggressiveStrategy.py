@@ -33,7 +33,7 @@ class AggressiveStrategy(GameStrategy):
         }
 
     def get_strategy_name(self) -> str:
-        return "Aggressive Strategy"
+        return "AggressiveStrategy"
 
     def prioritize_targets(self, available_targets: list) -> list:
         return [creature for creature in available_targets if

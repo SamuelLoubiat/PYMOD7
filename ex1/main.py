@@ -1,8 +1,7 @@
 from ex0.CreatureCard import CreatureCard
 from ex1.ArtifactCard import ArtifactCard
+from ex1.Deck import Deck
 from ex1.SpellCard import SpellCard
-
-from .Deck import Deck
 
 
 def main() -> None:
@@ -10,7 +9,7 @@ def main() -> None:
     deck = Deck()
     dragon = CreatureCard('Fire Dragon', 5, 'Legendary', 8, 8)
     deck.add_card(dragon)
-    lightning = SpellCard('Lightning Bolt', 4, 'Legendary', '')
+    lightning = SpellCard('Lightning Bolt', 4, 'Legendary', 'damage')
     deck.add_card(lightning)
     mana = ArtifactCard('Mana Crystal', 3, 'Legendary', 8,
                         'Permanent: +1 mana per turn')
@@ -28,7 +27,7 @@ def main() -> None:
     card = deck.draw_card()
 
     print(
-        f"\nDrew {card.name} ({card.__class__.__name__.replace('Card', '')})")
+        f"\nDrew: {card.name} ({card.__class__.__name__.replace('Card', '')})")
     print(f"Play result: {card.play({'action': 'summon'})}")
 
     card = deck.draw_card()

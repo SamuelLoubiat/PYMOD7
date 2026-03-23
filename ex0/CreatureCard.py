@@ -1,4 +1,4 @@
-from .Card import Card, CardError
+from ex0.Card import Card, CardError
 
 
 class CreatureError(CardError):
